@@ -21,7 +21,7 @@ double get_east_storage(std::string date){
     double eastSt;
     
     while(fin >> data_date >> eastSt) { 
-        if((date == data_date) == 1){
+        if((date == data_date)){
             std::cout << "East basin storage: " << eastSt << " billion gallons" << std::endl;
         }
       
@@ -120,7 +120,7 @@ std::string compare_basins(std::string date){
     double westE1;
     
     while(fin >> data_date >> eastSt >> eastE1 >> westSt >> westE1) { 
-        if((date == data_date) == 1){
+        if((date == data_date)){
             if(eastE1 > westE1)
                 return "East";
             else if(eastE1 < westE1)
