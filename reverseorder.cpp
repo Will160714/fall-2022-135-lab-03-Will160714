@@ -29,7 +29,7 @@ void reverse_oreder(std::string date1, std::string date2){
     bool start = false;
 
     while(fin >> data_date >> eastSt >> eastE1 >> westSt >> westE1) { 
-        if((date1 == data_date) == 1){
+        if((date1 == data_date)){
             start = true;
         }
 
@@ -39,7 +39,7 @@ void reverse_oreder(std::string date1, std::string date2){
             current_size ++;
         }
 
-        if((date2 == data_date) == 1){
+        if((date2 == data_date)){
             start = false;
             break;
         }
