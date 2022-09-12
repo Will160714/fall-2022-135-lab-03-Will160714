@@ -2,10 +2,12 @@
 #include <fstream>
 #include <cstdlib>
 #include <climits>
-#include "reserveorder.h"
+#include "reverseorder.h"
 #include <string>
 
 void reverse_oreder(std::string date1, std::string date2){
+
+    std::ifstream fin("Current_Reservoir_Levels.tsv");
     if (fin.fail()) {
         std::cerr << "File cannot be opened for reading." << std::endl;
         exit(1); // exit if failed to open the file
@@ -22,7 +24,7 @@ void reverse_oreder(std::string date1, std::string date2){
 
     const int SIZE = 366;
     double west_Elevation[SIZE];
-    string dates[SIZE];
+    std::string dates[SIZE];
     int current_size = 0;
     bool start = false;
 
@@ -37,7 +39,7 @@ void reverse_oreder(std::string date1, std::string date2){
             current_size ++;
         }
 
-        if((date1 == data_date) == 1){
+        if((date2 == data_date) == 1){
             start = false;
             break;
         }
@@ -48,8 +50,8 @@ void reverse_oreder(std::string date1, std::string date2){
 
     fin.close();
 
-    for(int x = current_size; x >= 0; x--){
-        std::cout << dates[current_size] << " " << west_Elevation[current_size] << std::endl;
+    for(int x = current_size - 1; x >= 0; x--){
+        std::cout << dates[x] << " " << west_Elevation[x] << " ft" << std::endl;
     }
 
 }
