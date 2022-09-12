@@ -1,6 +1,7 @@
 // add your code as appropriate 
 #include <iostream>
 #include "reservoir.h"
+#include "reverseorder.h"
 
 int main(){
   std::cout << "Task A" << std::endl;
@@ -8,8 +9,7 @@ int main(){
   std::cout << std::endl;
   get_east_storage("05/20/2018");
   std::cout << std::endl;
-  get_east_storage("09/24/201"); //67.68
-  std::cout << std::endl;
+  get_east_storage("09/24/2018"); //67.68
 
   std::cout << std::endl;
   
@@ -26,4 +26,10 @@ int main(){
   std::cout << std::endl;
 
   std::cout << "Task D" << std::endl;
+  std::cout << "Enter earlier date: 05/29/2018" << std::endl;
+  std::cout << "Enter later date: 06/02/2018" << std::endl;
+  std::cout << std:: endl;
+  reverse_oreder("05/29/2018", "06/02/2018");
+
+  return 0;
 }
