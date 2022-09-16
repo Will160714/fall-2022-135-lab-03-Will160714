@@ -10,7 +10,6 @@ int main(){
   get_east_storage("05/20/2018");
   std::cout << std::endl;
   get_east_storage("09/24/2018"); //67.68
-
   std::cout << std::endl;
   
   std::cout << "Task B" << std::endl;
@@ -22,7 +21,7 @@ int main(){
   std::cout << "Compare Basins on (01/05/2018): " << compare_basins("01/05/2018") << std::endl;
   std::cout << "Compare Basins on (09/13/2018): " << compare_basins("09/13/2018") << std::endl;
   std::cout << "Compare Basins on (03/31/2018): " << compare_basins("03/31/2018") << std::endl;
-  std::cout << "Compare Basins on (09/13/2018): " << compare_basins("09/13/2018") << std::endl;
+  std::cout << "Compare Basins on (11/13/2018): " << compare_basins("11/13/2018") << std::endl;
   std::cout << std::endl;
 
   std::cout << "Task D" << std::endl;
